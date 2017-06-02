@@ -1,0 +1,57 @@
+.fix-column {
+    background: white;
+    height: 3205px;
+    text-align: center;
+    padding: 0px 25px 0px 25px;
+}
+
+.sign-in-box {
+    
+    width: 100%;
+    height: 100px;
+}
+
+.fix-column-header-line {
+    background: url("../../assets/images/fix-column-header-line.png") no-repeat center;
+    height: 30px;
+}
+
+.fix-column-tool-bar{
+    background: url("../../assets/images/fix-column-tool-bar.png") no-repeat center;
+    height: 70px;
+}
+
+.box {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    margin-bottom: 60px;
+}
+
+.header-status {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.header-status .col-sm-1 {
+    padding-left: 0px;
+}
+
+.header-status .col-sm-6 {
+    text-align: left;
+    padding-left: 0px;
+}
+
+.header-status .col-sm-3 {
+    padding: 0px;
+}
+
+.header-status .like {
+    background: url("../../assets/images/like.png") no-repeat right;
+    width: 30px;
+    height: 20px;
+}
+
