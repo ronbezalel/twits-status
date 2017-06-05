@@ -1,6 +1,6 @@
 .fix-column {
     background: white;
-    height: 3205px;
+    height: 1500px;
     text-align: center;
     padding: 0px 25px 0px 25px;
 }
@@ -14,6 +14,11 @@
 .fix-column-header-line {
     background: url("../../assets/images/fix-column-header-line.png") no-repeat center;
     height: 30px;
+}
+
+.fix-column .status{
+    direction: rtl;
+    font-size: 14px;
 }
 
 .fix-column-tool-bar{

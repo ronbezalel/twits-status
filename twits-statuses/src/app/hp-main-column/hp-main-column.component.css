@@ -1,0 +1,196 @@
+.separation {
+    width: 100%;
+    height: 48px;
+    background-color: transparent;
+}
+
+.half-yellow {
+    background-color: transparent;
+    padding: 0;
+}
+
+.header [class^='col-xs'].date {
+    height: 40px;
+    background-color: #FFF100;
+    padding-right: 20px;
+}
+
+.date h2 {
+    font-weight: 900;
+    font-size: 26px;
+    /*margin: 16px 0px 0px 17px ;*/
+    margin-top: 16px;
+    float: right;
+}
+
+.half-trans {
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    margin:0;
+}
+
+.full-yellow {
+    background-color: #FFF100;
+    height: 30px;
+    padding-right: 20px;
+}
+
+.full-yellow h6 {
+    float: right;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.header {
+    height: 70px;
+    margin: 0;
+}
+
+.header [class^='col-xs'] {
+    padding: 0;
+}
+
+.box {
+    width: 100%;
+    height: 210px;
+    opacity: 0.8;
+}
+
+.left-border {
+     border-left: 10px solid #FFF100;
+}
+
+.right-border {
+     border-right: 10px solid #FFF100;
+}
+
+.full-yellow.special {
+    width: 80%;
+    float: right;
+}
+
+.separation.special {
+    width: 80%;
+    float: right;
+}
+
+.col-xs-2.special {
+    width: 20%;
+}
+
+table {
+    width: 100%;
+    height: 205px;
+    background-color: transparent;
+}
+
+.sec-col {
+    font-size: 12px;
+    font-weight: 800;
+    padding: 0px 10px 20px 10px;
+    direction: rtl;
+    width: 347px;
+}
+
+/*table1*/
+
+#table-post1 .first-row {
+    height: 68px
+}
+
+#table-post1 .sec-row {
+    height: 165px
+}
+
+
+#table-post1 .first-col {
+    width: 80px;
+}
+
+#table-post1 .sec-col {
+    background: url(../../assets/images/hp-idea-box.png);
+}
+
+#table-post1 .third-col {
+    width: 264px;
+}
+
+/*table2*/
+
+#table-post2 .first-row {
+    height: 67px
+}
+
+#table-post2 .sec-row {
+    height: 167px
+}
+
+
+#table-post2 .first-col {
+    width: 0px;
+}
+
+#table-post2 .sec-col {
+    background: url(../../assets/images/hp-idea-box.png);
+}
+
+#table-post2 .third-col {
+    width: 50%;
+}
+
+/*table3*/
+
+#table-post3 .first-row {
+    height: 47px
+}
+
+#table-post3 .sec-row {
+    height: 167px
+}
+
+
+#table-post3 .first-col {
+    width: 342px;
+}
+
+#table-post3 .sec-col {
+    background: url(../../assets/images/hp-idea-box.png);
+}
+
+#table-post3 .third-col {
+    width: 15px;
+}
+
+/*table4*/
+
+#table-post4 .first-row {
+    height: 68px
+}
+
+#table-post4 .sec-row {
+    height: 167px
+}
+
+
+#table-post4 .first-col {
+    width: 123px;
+}
+
+#table-post4 .sec-col {
+    background: url(../../assets/images/hp-idea-box.png);
+}
+
+#table-post4 .third-col {
+    width: 232px;
+}
+
+@media (max-width : 510px) {
+    .date h2 {
+        font-size: 20px;
+    }
+
+    .row {
+        margin:0;
+    }
+}
