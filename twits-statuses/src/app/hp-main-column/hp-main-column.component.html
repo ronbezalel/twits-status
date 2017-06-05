@@ -1,0 +1,129 @@
+<h1>Main</h1>
+<div class="row" *ngFor="let post of posts; let i=index">
+    <!-- first-post -->
+
+    <div *ngIf="i == 0">
+    <div class="separation"></div>
+        <div class="row header">
+            <div class="col-xs-9">
+                <div class="row half-trans">
+                    <div class="col-xs-7">
+                        
+                    </div>
+                    <div class="col-xs-5 date">
+                        <h2>{{post.date}}</h2>
+                    </div>
+                </div>
+                <div class="full-yellow">
+                    <h6>{{post.title}}</h6>
+                </div>
+            </div>
+        </div>
+        <div class="box left-border" [style.background-image]="'url(' + post.imgUrl + ')'">
+            <table id="table-post1">
+                <tr class="first-row"><tr>
+                <tr class="sec-row">
+                    <td class="first-col"></td>
+                    <td class="sec-col">
+                        {{post.header}}
+                    </td>
+                    <td class="third-col"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="separation left-border"></div>
+    </div>
+    <!-- second-post -->
+    <div *ngIf="i == 1">
+        <div class="row header">
+            <div class="col-xs-12">
+                <div class="row half-trans left-border">
+                    <div class="col-xs-8">
+                        
+                    </div>
+                    <div class="col-xs-4 date">
+                        <h2>{{post.date}}</h2>
+                    </div>
+                </div>
+                <div class="full-yellow">
+                    <h6>{{post.title}}</h6>
+                </div>
+            </div>
+        </div>
+        <div class="box right-border" [style.background-image]="'url(' + post.imgUrl + ')'">
+            <table id="table-post2">
+                <tr class="first-row"><tr>
+                <tr class="sec-row">
+                    <td class="first-col"></td>
+                    <td class="sec-col">
+                        {{post.header}}
+                    </td>
+                    <td class="third-col"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="separation right-border"></div>
+    </div>
+    <!-- third-post -->
+    <div *ngIf="i == 2" class="last-post">
+        <div class="row header">
+            <div class="col-xs-12">
+                <div class="row half-trans">
+                    <div class="col-xs-8">
+                        
+                    </div>
+                    <div class="col-xs-4 date">
+                        <h2>{{post.date}}</h2>
+                    </div>
+                </div>
+                <div class="full-yellow special">
+                    <h6>{{post.title}}</h6>
+                </div>
+            </div>
+        </div>
+        <div class="box" [style.background-image]="'url(' + post.imgUrl + ')'">
+            <table id="table-post3">
+                <tr class="first-row"><tr>
+                <tr class="sec-row">
+                    <td class="first-col"></td>
+                    <td class="sec-col">
+                        {{post.header}}
+                    </td>
+                    <td class="third-col"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="separation left-border special"></div>
+    </div>
+    <!-- fourth-post -->
+    <div *ngIf="i == 3">
+        <div class="row header">
+            <div class="col-xs-2 special"></div>
+            <div class="col-xs-7">
+                <div class="row half-trans left-border">
+                    <div class="col-xs-6">
+                        
+                    </div>
+                    <div class="col-xs-6 date">
+                        <h2>{{post.date}}</h2>
+                    </div>
+                </div>
+                <div class="full-yellow">
+                    <h6>{{post.title}}</h6>
+                </div>
+            </div>
+        </div>
+        <div class="box" [style.background-image]="'url(' + post.imgUrl + ')'">
+            <table id="table-post4">
+                <tr class="first-row"><tr>
+                <tr class="sec-row">
+                    <td class="first-col"></td>
+                    <td class="sec-col">
+                        {{post.header}}
+                    </td>
+                    <td class="third-col"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

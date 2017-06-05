@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FixColumnComponent } from './fix-column/fix-column.component';
+import { HpMainColumnComponent } from './hp-main-column/hp-main-column.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    FixColumnComponent
+    FixColumnComponent,
+    HpMainColumnComponent
   ],
   imports: [
     BrowserModule,

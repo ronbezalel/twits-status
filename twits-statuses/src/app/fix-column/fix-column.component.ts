@@ -9,6 +9,7 @@ export class FixColumnComponent implements OnInit {
 
   topStatuses : HeaderStatus[] = [];
 
+
     constructor() {
       this.load();
     }
@@ -19,6 +20,10 @@ export class FixColumnComponent implements OnInit {
 
           this.topStatuses.push(status);
       }
+    }
+
+    statusesLength(){
+      return this.topStatuses.length;
     }
 
   ngOnInit() {
