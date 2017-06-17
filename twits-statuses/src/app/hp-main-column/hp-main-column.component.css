@@ -91,6 +91,7 @@ table {
     padding: 0px 10px 20px 10px;
     direction: rtl;
     width: 347px;
+    background: url(../../assets/images/hp-idea-box.png) 100% no-repeat;
 }
 
 /*table1*/
@@ -109,7 +110,7 @@ table {
 }
 
 #table-post1 .sec-col {
-    background: url(../../assets/images/hp-idea-box.png);
+    
 }
 
 #table-post1 .third-col {
@@ -132,7 +133,7 @@ table {
 }
 
 #table-post2 .sec-col {
-    background: url(../../assets/images/hp-idea-box.png);
+    /*background: url(../../assets/images/hp-idea-box.png);*/
 }
 
 #table-post2 .third-col {
@@ -155,7 +156,7 @@ table {
 }
 
 #table-post3 .sec-col {
-    background: url(../../assets/images/hp-idea-box.png);
+    /*background: url(../../assets/images/hp-idea-box.png);*/
 }
 
 #table-post3 .third-col {
@@ -178,7 +179,7 @@ table {
 }
 
 #table-post4 .sec-col {
-    background: url(../../assets/images/hp-idea-box.png);
+    /*background: url(../../assets/images/hp-idea-box.png);*/
 }
 
 #table-post4 .third-col {

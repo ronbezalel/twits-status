@@ -11,8 +11,8 @@
         <h4>עשרת הגדולים</h4>
         <div class="fix-column-header-line"></div> 
         <div class="fix-column-tool-bar"></div> 
-        <div class="header-status row" *ngFor="let status of topStatuses">
-            <div class="col-sm-1">{{(statusesLength() + 1) - status.id}}.</div>
+        <div class="header-status row" *ngFor="let status of topStatuses; let i=index">
+            <div class="col-sm-1">{{(i + 1)}}.</div>
             <div class="col-sm-6">{{status.owner}}</div>
             <div class="col-sm-2">{{status.twits}}</div>
             <div class="col-sm-3">
