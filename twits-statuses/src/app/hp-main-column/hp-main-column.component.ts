@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { PostService } from '../services/posts.service';
+import { Post } from '../services/post.model';
 
 @Component({
   selector: 'app-hp-main-column',
   templateUrl: './hp-main-column.component.html',
-  styleUrls: ['./hp-main-column.component.css']
+  styleUrls: ['./hp-main-column.component.css'],
+  providers: [PostService]
 })
 export class HpMainColumnComponent implements OnInit {
     //delete 
@@ -11,36 +14,16 @@ export class HpMainColumnComponent implements OnInit {
     imgUrl: string = '../../assets/fake-images/post-back';
     posts: Post[] = [];
 
-    constructor() { 
+    constructor(private postsService: PostService) { 
         this.load();
 
     }
 
     load(){
-        for(var i = 0; i < 4; i++){
-            var imgUrl = `${this.imgUrl}${i}.png`;
-
-            var post = new Post('02.10.10', 'האלמנה עושה בושדות בפייסבוק', this.content, imgUrl);
-            this.posts.push(post);
-        }
+        this.posts = this.postsService.getAllPosts();
     }
 
     ngOnInit() {
-    }
-
-}
-
-class Post{
-    date: string;
-    title: string;
-    header: string;
-    imgUrl: string;
-
-    constructor(date: string, title: string, header: string, imgUrl: string){
-        this.date = date;
-        this.title = title;
-        this.header = header;
-        this.imgUrl = imgUrl;
     }
 
 }

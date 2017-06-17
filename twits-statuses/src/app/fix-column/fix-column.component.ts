@@ -1,25 +1,24 @@
 import { Component, OnInit } from '@angular/core';
+import { StatusesService } from '../services/statuses.service';
+import { HeaderStatus } from '../services/status.model';
 
 @Component({
   selector: 'app-fix-column',
   templateUrl: './fix-column.component.html',
-  styleUrls: ['./fix-column.component.css']
+  styleUrls: ['./fix-column.component.css'],
+  providers: [StatusesService]
 })
 export class FixColumnComponent implements OnInit {
 
   topStatuses : HeaderStatus[] = [];
 
 
-    constructor() {
+    constructor(private statusesService: StatusesService) {
       this.load();
     }
 
     load() {
-      for(var i = 10; i > 0 ; i--){
-          var status = new HeaderStatus(i, 'test' + i, (i * 5), (i * 7));
-
-          this.topStatuses.push(status);
-      }
+      this.topStatuses = this.statusesService.getAll10Top();
     }
 
     statusesLength(){
@@ -29,18 +28,4 @@ export class FixColumnComponent implements OnInit {
   ngOnInit() {
   }
 
-}
-
-export class HeaderStatus {
-    id : number;
-    owner: string;
-    twits: number;
-    likes: number;
-
-    constructor(id: number, owner: string, twits: number,likes: number){
-        this.id = id;
-        this.owner = owner;
-        this.twits = twits;
-        this.likes = likes;
-    }
 }
