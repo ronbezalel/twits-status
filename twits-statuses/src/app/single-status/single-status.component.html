@@ -1,0 +1,11 @@
+<div class="status-box" *ngIf="status != null">
+    <div>By: {{status.userName}}</div>
+    <div>Content: {{status.statusContent.content}}</div>
+    <div>Date: {{status.statusContent.date}}</div>
+    <div>Likes: {{status.statusContent.likes}}</div>
+    <div>Twits: {{status.statusContent.tweets}}</div>
+
+    <a class="btn btn-primary" (click)="incTwits()">add twit</a>
+    <a class="btn btn-primary" (click)="storeStatusId()" routerLink="/status">go to status</a>
+    
+</div>

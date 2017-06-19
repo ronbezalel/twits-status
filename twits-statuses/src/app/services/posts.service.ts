@@ -11,23 +11,10 @@ export class PostService {
     imgUrl: string = '../../assets/fake-images/post-back';
 
     constructor(private http : Http) { 
-        this.load();
 
-    }
-
-    load(){
-
-        this.http.get('http://tweets-statuses.herokuapp.com/GetAllPosts')
-            .subscribe((response: Response) => {
-                var rawPosts = response.json();
-                for(var i in rawPosts){
-                    var post = new Post(rawPosts[i].date, rawPosts[i].title, rawPosts[i].content, this.imgUrl + i + '.png');
-                    this.posts.push(post);
-                }
-            })
     }
 
     getAllPosts(){
-        return this.posts;
+        return this.http.get('http://tweets-statuses.herokuapp.com/GetAllPosts');
     }
 }

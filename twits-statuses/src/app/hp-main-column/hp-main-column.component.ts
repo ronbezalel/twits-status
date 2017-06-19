@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../services/posts.service';
 import { Post } from '../services/post.model';
+import { Response } from '@angular/http';
 
 @Component({
   selector: 'app-hp-main-column',
@@ -9,8 +10,7 @@ import { Post } from '../services/post.model';
   providers: [PostService]
 })
 export class HpMainColumnComponent implements OnInit {
-    //delete 
-    content: string = 'מתחיל להיות צפוף בצמרת, בין המקום הראשון למקום השני מבדילים שני לייקים. הבוקר עוד הוביל קנט קלארק. יוזר שבחר בשמו של סופרמן. בהפרש של שני לייקים. עכשיו המצב התהפך סופרמן במקום השני עם 568 לייקים. וליאור'
+    //delete     
     imgUrl: string = '../../assets/fake-images/post-back';
     posts: Post[] = [];
 
@@ -20,7 +20,14 @@ export class HpMainColumnComponent implements OnInit {
     }
 
     load(){
-        this.posts = this.postsService.getAllPosts();
+        this.postsService.getAllPosts()
+        .subscribe((response: Response) => {
+                var rawPosts = response.json();
+                for(var i in rawPosts){
+                    var post = new Post(rawPosts[i].date, rawPosts[i].title, rawPosts[i].content, this.imgUrl + i + '.png');
+                    this.posts.push(post);
+                }
+            })
     }
 
     ngOnInit() {

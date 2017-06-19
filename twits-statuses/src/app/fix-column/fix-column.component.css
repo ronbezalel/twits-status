@@ -2,13 +2,15 @@
     background: white;
     height: 1500px;
     text-align: center;
-    padding: 0px 25px 0px 25px;
+    padding: 25px;
 }
 
 .sign-in-box {
     
     width: 100%;
-    height: 100px;
+    min-height: 100px;
+    padding: 10px;
+    text-align: left;
 }
 
 .fix-column-header-line {

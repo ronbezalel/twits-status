@@ -1,0 +1,13 @@
+a {
+    cursor: pointer;;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.login-error {
+    padding: 10px;
+    color: #b71c1c;
+    font-weight: 600;
+}
