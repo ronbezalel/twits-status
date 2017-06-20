@@ -8,7 +8,7 @@ import { Http, Response } from '@angular/http';
 export class PostService {
     private posts: Post[] = [];
     content: string = 'מתחיל להיות צפוף בצמרת, בין המקום הראשון למקום השני מבדילים שני לייקים. הבוקר עוד הוביל קנט קלארק. יוזר שבחר בשמו של סופרמן. בהפרש של שני לייקים. עכשיו המצב התהפך סופרמן במקום השני עם 568 לייקים. וליאור'
-    imgUrl: string = '../../assets/fake-images/post-back';
+    imgUrl: string = '../../assets/post-back';
 
     constructor(private http : Http) { 
 

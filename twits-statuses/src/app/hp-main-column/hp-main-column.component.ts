@@ -11,7 +11,7 @@ import { Response } from '@angular/http';
 })
 export class HpMainColumnComponent implements OnInit {
     //delete     
-    imgUrl: string = '../../assets/fake-images/post-back';
+    imgUrl: string = '../../assets/post-back';
     posts: Post[] = [];
 
     constructor(private postsService: PostService) { 

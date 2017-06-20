@@ -1,11 +1,11 @@
 .wrapper {
-    background: url("../../assets/images/hp-bg.png");
+    background: url("../../assets/hp-bg.png");
     width: 100%;
     /*height: 3205px;*/
 }
 
 .top-hp {
-    background: url("../../assets/images/hp-top.png");
+    background: url("../../assets/hp-top.png");
     width: 100%;
     height: 216px;
 }
