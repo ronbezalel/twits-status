@@ -7,16 +7,19 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FixColumnComponent } from './fix-column/fix-column.component';
 import { HpMainColumnComponent } from './hp-main-column/hp-main-column.component';
-import { DisplayFuncComponent } from './display-func/display-func.component';
 import { LoginComponent } from './login/login.component';
 import { SingleStatusComponent } from './single-status/single-status.component';
 
 import { UsersService } from './services/users.service';
 import { StatusesService } from './services/statuses.service';
+import { PostService } from './services/posts.service';
 
 import { StatusComponent } from './status/status.component';
 
 import { AppRoutingModule } from './app-routing.module';
+import { MyProfileComponent } from './my-profile/my-profile.component';
+import { ProfileComponent } from './profile/profile.component';
+import { PostsComponent } from './posts/posts.component';
 
 @NgModule({
   declarations: [
@@ -24,10 +27,12 @@ import { AppRoutingModule } from './app-routing.module';
     HomePageComponent,
     FixColumnComponent,
     HpMainColumnComponent,
-    DisplayFuncComponent,
     LoginComponent,
     SingleStatusComponent,
-    StatusComponent
+    StatusComponent,
+    MyProfileComponent,
+    ProfileComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +40,7 @@ import { AppRoutingModule } from './app-routing.module';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [UsersService, StatusesService],
+  providers: [UsersService, StatusesService, PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

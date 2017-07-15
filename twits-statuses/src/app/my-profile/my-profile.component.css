@@ -1,0 +1,16 @@
+.my-profile {
+    background: url("./assets/images/my-profile.png") no-repeat;
+    width: 100px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    top: 45px;
+    left: 504px;
+}
+
+@media (max-width : 510px) {
+    .my-profile{
+        top: 16px;
+        left: 250px;
+    }
+}

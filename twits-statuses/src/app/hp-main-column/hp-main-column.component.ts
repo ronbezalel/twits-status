@@ -6,12 +6,9 @@ import { Response } from '@angular/http';
 @Component({
   selector: 'app-hp-main-column',
   templateUrl: './hp-main-column.component.html',
-  styleUrls: ['./hp-main-column.component.css'],
-  providers: [PostService]
+  styleUrls: ['./hp-main-column.component.css']
 })
-export class HpMainColumnComponent implements OnInit {
-    //delete     
-    imgUrl: string = '../../assets/post-back';
+export class HpMainColumnComponent implements OnInit {   
     posts: Post[] = [];
 
     constructor(private postsService: PostService) { 
@@ -20,14 +17,28 @@ export class HpMainColumnComponent implements OnInit {
     }
 
     load(){
-        this.postsService.getAllPosts()
+        this.postsService.getAllPostsSummery()
         .subscribe((response: Response) => {
                 var rawPosts = response.json();
                 for(var i in rawPosts){
-                    var post = new Post(rawPosts[i].date, rawPosts[i].title, rawPosts[i].content, this.imgUrl + i + '.png');
+                    var rawPost = rawPosts[i];
+                    var post = new Post(rawPost.date,
+                                        null, 
+                                        rawPost.summery.join(','),
+                                        rawPost.title, 
+                                        rawPost.mainImgUrl,
+                                        rawPost._id, 
+                                        rawPost.comments, 
+                                        rawPost.category, 
+                                        rawPost.contentImgsUrl);
                     this.posts.push(post);
                 }
             })
+    }
+
+    storePostDetails(postId: string, postCategory){
+            this.postsService.storePostId = postId;
+            this.postsService.storeCategory = postCategory;
     }
 
     ngOnInit() {

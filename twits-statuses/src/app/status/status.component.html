@@ -1,15 +1,65 @@
-<div class="error" *ngIf="displayError">
-    <span>{{error}}</span>
+<div class="fix">
+    <app-my-profile></app-my-profile>
 </div>
-
-<div class="status-box" *ngIf="status != null">
-    <div>By: {{status.userName}}</div>
-    <div>Content: {{status.statusContent.content}}</div>
-    <div>Date: {{status.statusContent.date}}</div>
-    <div>Likes: {{status.statusContent.likes}}</div>
-    <div>Twits: {{status.statusContent.tweets}}</div>
-
-    <!-- <a class="btn btn-primary" (click)="incTwits()">add twit</a> -->
-    <a class="btn btn-primary" routerLink="/home">back</a>
-    
+<div class="wrapper">
+    <div class="row">
+        <div class="col-sm-5 hidden-xs">
+            <div class="row">
+                <div class="col-sm-7 hidden-xs"></div>
+                <div class="col-sm-5 hidden-xs no-padding">
+                    <app-fix-column></app-fix-column>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-7 main-col col-xs-12">
+            <div class="row">
+                <div class="col-sm-8 col-xs-12">
+                    <img src="./assets/images/sp-status-topper.png" class="status-topper">
+                    <div *ngIf="displayError">
+                        <div class="error">{{error}}</div>
+                    </div>
+                    <div *ngIf="status != null">
+                        <div class="row user-sec">
+                            <div class="col-sm-10 col-xs-12">
+                                <img [src]="status.userImg">
+                                <div class="name">{{status.userName}} ({{status.statusContent.date}})</div>
+                                <div class="blue-trailer"></div>
+                            </div>
+                            <div class="col-sm-2 hidden-xs"></div>
+                        </div>
+                        <div class="row status-sec">
+                            <div class="col-sm-10 col-xs-12">
+                                <div class="status-content">"{{status.statusContent.content}}"</div>
+                                <div class="action-sec">
+                                    <span>{{status.statusContent.likes}}</span>
+                                    <img src="./assets/images/like-gray.png">
+                                    <span>{{status.statusContent.tweets}}</span>
+                                    <img src="./assets/images/twit-gray.png" (click)="incTwits()" class="curser">
+                                </div>
+                            </div>
+                            <div class="col-sm-2 hidden-xs"></div>
+                        </div>
+                        <div class="row comments-container">
+                            <div class="col-sm-10 col-xs-12">
+                                 <div class="comments">
+                                     <div class="comment" *ngFor="let comment of status.statusContent.comments">
+                                         <div class="name-date">
+                                             <span class="name">{{comment.owner}}</span><span class="date">{{comment.date}}</span>
+                                         </div>
+                                         <div class="comment-content">
+                                             {{comment.content}}
+                                         </div>
+                                         <hr>
+                                     </div>
+                                 </div>
+                            </div>
+                            <div class="col-sm-2 hidden-xs"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 hidden-xs right-section"></div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-background-img"></div>
 </div>

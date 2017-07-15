@@ -1,11 +1,27 @@
-<div class="status-box" *ngIf="status != null">
-    <div>By: {{status.userName}}</div>
-    <div>Content: {{status.statusContent.content}}</div>
-    <div>Date: {{status.statusContent.date}}</div>
-    <div>Likes: {{status.statusContent.likes}}</div>
-    <div>Twits: {{status.statusContent.tweets}}</div>
 
-    <a class="btn btn-primary" (click)="incTwits()">add twit</a>
-    <a class="btn btn-primary" (click)="storeStatusId()" routerLink="/status">go to status</a>
-    
+
+<div class="status-box" *ngIf="status != null">
+    <div class="topper"></div>
+    <div class="content">
+        <div class="text-sec" (click)="storeStatusId()" routerLink="/status">
+            <span class="status-content">"{{status.statusContent.content}}"</span>
+            <span class="name">{{status.userName}} ({{status.statusContent.date}})</span>
+        </div>
+        <div class="like-twit">
+            <span>{{status.statusContent.likes}} לייק </span>
+            <img src="./assets/images/like-blue.png">
+            <span>{{status.statusContent.tweets}} צוויץ </span>
+            <img src="./assets/images/twit.png" (click)="incTwits()">
+
+        </div>
+    </div>
+    <div class="blue-space"></div>
+    <div class="add-status">
+        <div *ngIf="getIsLoggedIn()">
+            <span>כתוב לנו את הסטטוס שלך |</span>
+            <input type="text" [(ngModel)]="newStatusText" [placeholder]="newStatusDesc">
+            <a (click)="sendNewStatus()">שלח</a>
+        </div>
+
+    </div>
 </div>

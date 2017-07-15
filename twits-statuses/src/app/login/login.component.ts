@@ -19,14 +19,15 @@ export class LoginComponent implements OnInit {
     displayError: boolean = false;
     error: string = "";
 
-  constructor(private usersService: UsersService) { 
+  constructor(public usersService: UsersService) { 
 
   }
 
   displayLogin(){
-      if(this.isLoggedIn){
+      if(this.usersService.isLoggedIn){
         this.display = false;
         this.logout();
+        window.location.href = '/home';
         return;
       }
       this.display = !this.display;
@@ -36,24 +37,12 @@ export class LoginComponent implements OnInit {
     this.error = "";
     this.displayError = false;
 
-    this.usersService.login(new LoginParams(this.userName, this.pass))
-    .subscribe((response : Response) => { // <-------
-            var res = response.json();
-            if(res.error != undefined){
-                this.displayError = true;
-                this.error = res.error;
-            }
-            else{
-              this.isLoggedIn = true;
-              this.display = false;
-            }
-        });
+    this.usersService.login(new LoginParams(this.userName, this.pass));
   }
 
 
   logout(){
       this.usersService.logout().subscribe((success) => {
-        this.isLoggedIn = false;
       })
   }
 

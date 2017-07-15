@@ -1,0 +1,290 @@
+.wrapper {
+    width: 100%;
+}
+
+.wrapper > .row {
+    margin-right: 0px;
+}
+
+.wrapper .col-sm-5 .col-sm-7 {
+    background: url("./assets/images/hp-bg.png");
+
+    min-height: 1410px;
+}
+
+.wrapper .col-sm-5 .col-sm-5 {
+        padding-top: 45px;
+}
+
+.main-col .col-sm-8 {
+    background: url("./assets/images/hp-bg.png");
+}
+
+.fix {
+    background: url("./assets/images/hp-top2.png") no-repeat;
+    width: 100%;
+    height: 173px;
+    position: absolute;
+    z-index: 999;
+}
+
+.top-background-img{
+    background: url("./assets/images/hp-top2.png") no-repeat;
+    padding-top: 45px;
+    margin: 0;
+}
+
+.bottom-background-img {
+    background: url("./assets/images/hp-bottom.png") no-repeat;
+    background-color: white;
+    height: 200px;
+}
+
+.right-section {
+    background: white;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.main-col {
+    margin-top: 0px;
+    padding-top: 70px;
+}
+
+.main-col .col-sm-8.col-xs-12 {
+    padding: 0;
+    padding-top: 50px;
+}
+
+.error {
+    color: #b71c1c;
+    font-size: 18px;
+    font-weight: 700;
+    padding-left: 50px;
+}
+
+/*new css*/
+
+.topper {
+     background: url("./assets/images/hp-status-topper.png") no-repeat center center;
+     background-size: cover;
+     width:100%;
+     height: 150px;
+     border-bottom: 15px solid #ED1B24;
+}
+
+.user-header .col-sm-3 {
+    padding: 0;
+}
+
+.user-header .col-sm-3 img {
+    width: 100%;
+    height: 130px;
+}
+
+.user-header .row {
+    margin-left: 0px;
+    margin-right: 0px;
+    direction: rtl;
+}
+
+.user-header .col-sm-9 {
+    background: url("./assets/images/sp-gray-bg.png") repeat-y;
+    height: 130px;
+    padding-right: 0px;
+    padding-bottom: 7px;
+}
+
+.user-header .name {
+    background-color: #ED1B24;
+    color: white;
+    width: 60%;
+    float: right;
+    height: 30px;
+    font-weight: 700;
+    font-size: 18px;
+    padding-right: 20px;
+}
+
+.user-header .user-info{
+    height: 45px;
+    width: 100%;
+    float: right;
+    color: white;
+    font-weight: 600;
+    padding: 5px 15px;
+}
+
+.user-info img {
+    display: inline-block;
+}
+
+.user-header .action {
+    height: 45px;
+    width: 100%;
+    float: right;
+    padding: 8px 13px;
+    border: 0.1em solid rgba(255, 255, 255, 0.61);
+    background-color: #666666;
+    color: white;
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.user-header .action input {
+    background-color: transparent;
+    border: none;
+}
+
+.user-header .action a {
+    color: white;
+    font-weight: 600;
+    float: left;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.left-status-sec {
+    width:80%;
+    height: 298px;
+}
+
+.space {
+    height: 30px;
+    width: 100%;
+}
+
+.space .col-sm-10 {
+    padding-right: 90px;
+}
+
+.space .col-sm-10 div {
+    border-right: 15px solid #ED1B24;
+    height: 30px;
+}
+
+.user-sec {
+    height: 105px;
+}
+
+.user-sec img {
+    float: right;
+}
+
+.user-sec .name {
+    float: right;
+    width: 40%;
+    margin-top: 25px;
+    height: 50px;
+    background-color: #ED1B24;
+    direction: rtl;
+    color: white;
+    padding-top: 15px;
+    padding-right: 15px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.user-sec .blue-trailer {
+    width: 50%;
+    margin-top: 45px;
+    height: 30px;
+    background-color: #ED1B24;
+}
+
+.first .user-sec {
+    background-color: white;
+}
+
+.first .user-sec .space div {
+    border: none;
+}
+
+.first .user-sec .col-sm-10 img {
+    border: none;
+}
+
+.not-even-status .user-sec {
+    margin-left: 0px;
+    border-left: 15px solid #ED1B24;
+}
+
+.not-even-status .user-sec .col-sm-10 {
+    padding-left: 0px;
+}
+
+.not-even-status .status-sec {
+    border: none;
+}
+
+.even .user-sec img {
+    border-left: 15px solid #ED1B24;
+}
+
+.status-sec {
+    height: 230px;
+    margin: 0;
+    border-left: 15px solid #ED1B24;
+    cursor: pointer;
+}
+.status-sec .col-sm-2 {
+    background: url("./assets/images/sp-right-bg.png") no-repeat center center;
+    background-size: cover;
+    height: 100%;
+}
+
+.status-sec .col-sm-10 {
+    background: url("./assets/images/sp-gray-bg.png") repeat-y;
+    height: 100%;
+    padding: 0;
+}
+
+.status-content {
+    background-color: white;
+    padding: 0;
+    width: 100%;
+    height: 150px;
+    direction: rtl;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.action-sec {
+    direction: rtl;
+    color: white;
+    padding-right: 30px;
+    padding-top: 20px;
+}
+
+.action-sec img {
+    padding-left: 15px;
+}
+
+.action-sec .curser {
+    cursor: pointer;
+}
+
+
+@media (max-width : 510px) {
+    .fix {
+        height: 70px;
+    }
+
+    .main-col {
+        padding-top: 0px;
+    }
+
+    .main-col .col-sm-8.col-xs-12 {
+        min-height: 500px;
+    }
+
+    .user-header .action {
+        margin-right: 0px;
+    }
+    .user-header .action input {
+        width: 120px;
+    }
+}

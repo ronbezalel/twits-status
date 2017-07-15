@@ -1,0 +1,202 @@
+<div class="fix">
+    <app-my-profile></app-my-profile>
+</div>
+<div class="wrapper">
+    <div class="row">
+        <div class="col-sm-5 hidden-xs">
+            <div class="row">
+                <div class="col-sm-7 hidden-xs" [style.height]="(posts.length * 305 + 1220) + 'px'"></div>
+                <div class="col-sm-5 hidden-xs no-padding">
+                    <app-fix-column></app-fix-column>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-7 main-col col-xs-12">
+            <div class="row">
+                <div class="col-sm-8 col-xs-12">
+                    <div class="posts-header">
+                        <div class="topper"></div>
+                        <div class="header">פוסטים</div>
+                        <div class="categories">
+                            <ul>
+                               <li *ngFor="let cat of categories; let i = index;">
+                                    <a [ngClass]="cat == postsService.storeCategory ? 'current' : ''" (click)="changeCategory(cat)">{{cat}}</a>
+                                    <span *ngIf="i != categories.length - 1">-</span>
+                               </li> 
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="display-post" *ngIf="displayPost != null">
+                        <div class="row header">
+                            <div class="col-xs-9">
+                                <div class="row half-trans">
+                                    <div class="col-xs-7">
+                                        
+                                    </div>
+                                    <div class="col-xs-5 date">
+                                        <h2>{{displayPost.date}}</h2>
+                                    </div>
+                                </div>
+                                <div class="full-yellow">
+                                    <h6>{{displayPost.title}}</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <img [src]="displayPost.mainImgUrl">
+                        <div class="display-post-content">
+                            {{displayPost.content}}
+                        </div>
+                        <div class="display-post-comments">
+                            <div class="row">
+                                <div class="col-xs-10">
+                                    <div class="comment" *ngFor="let comment of displayPost.comments">
+                                         <div class="name-date">
+                                             <span class="name">{{comment.owner}}</span><span class="date">{{comment.date}}</span>
+                                         </div>
+                                         <div class="comment-content">
+                                             {{comment.content}}
+                                         </div>
+                                         <hr>
+                                     </div>
+                                </div>
+                                <div class="col-xs-2">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="posts-category">
+                        <div class="row row-margin" *ngFor="let post of posts; let i = index;">
+                            <div *ngIf="i == 0">
+                            <div class="separation"></div>
+                                <div class="row header">
+                                    <div class="col-xs-9">
+                                        <div class="row half-trans">
+                                            <div class="col-xs-7">
+                                                
+                                            </div>
+                                            <div class="col-xs-5 date">
+                                                <h2>{{post.date}}</h2>
+                                            </div>
+                                        </div>
+                                        <div class="full-yellow">
+                                            <h6>{{post.title}}</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box left-border" [style.background-image]="'url(' + post.mainImgUrl + ')'" (click)="storePostDetails(post._id, post.category)" routerLink="/posts">
+                                    <table id="table-post1">
+                                        <tr class="first-row"><tr>
+                                        <tr class="sec-row">
+                                            <td class="first-col"></td>
+                                            <td class="sec-col">
+                                                {{post.summery}}
+                                            </td>
+                                            <td class="third-col"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="separation left-border" *ngIf="i != posts.length - 1"></div>
+                            </div>
+                            <!-- second-post -->
+                            <div *ngIf="i == 1">
+                                <div class="row header">
+                                    <div class="col-xs-12">
+                                        <div class="row half-trans left-border">
+                                            <div class="col-xs-8">
+                                                
+                                            </div>
+                                            <div class="col-xs-4 date">
+                                                <h2>{{post.date}}</h2>
+                                            </div>
+                                        </div>
+                                        <div class="full-yellow">
+                                            <h6>{{post.title}}</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box right-border" [style.background-image]="'url(' + post.mainImgUrl + ')'" (click)="storePostDetails(post._id, post.category)" routerLink="/posts">
+                                    <table id="table-post2">
+                                        <tr class="first-row"><tr>
+                                        <tr class="sec-row">
+                                            <td class="first-col"></td>
+                                            <td class="sec-col">
+                                                {{post.summery}}
+                                            </td>
+                                            <td class="third-col"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="separation right-border" *ngIf="i != posts.length - 1"></div>
+                            </div>
+                            <!-- third-post -->
+                            <div *ngIf="i == 2" class="last-post">
+                                <div class="row header">
+                                    <div class="col-xs-12">
+                                        <div class="row half-trans">
+                                            <div class="col-xs-8">
+                                                
+                                            </div>
+                                            <div class="col-xs-4 date">
+                                                <h2>{{post.date}}</h2>
+                                            </div>
+                                        </div>
+                                        <div class="full-yellow special">
+                                            <h6>{{post.title}}</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box" [style.background-image]="'url(' + post.mainImgUrl + ')'" (click)="storePostDetails(post._id, post.category)" routerLink="/posts">
+                                    <table id="table-post3">
+                                        <tr class="first-row"><tr>
+                                        <tr class="sec-row">
+                                            <td class="first-col"></td>
+                                            <td class="sec-col">
+                                                {{post.summery}}
+                                            </td>
+                                            <td class="third-col"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="separation left-border special" *ngIf="i != posts.length - 1"></div>
+                            </div>
+                            <!-- fourth-post -->
+                            <div *ngIf="i == 3">
+                                <div class="row header">
+                                    <div class="col-xs-2 special"></div>
+                                    <div class="col-xs-7">
+                                        <div class="row half-trans left-border">
+                                            <div class="col-xs-6">
+                                                
+                                            </div>
+                                            <div class="col-xs-6 date">
+                                                <h2>{{post.date}}</h2>
+                                            </div>
+                                        </div>
+                                        <div class="full-yellow">
+                                            <h6>{{post.title}}</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box" [style.background-image]="'url(' + post.mainImgUrl + ')'" (click)="storePostDetails(post._id, post.category)" routerLink="/posts">
+                                    <table id="table-post4">
+                                        <tr class="first-row"><tr>
+                                        <tr class="sec-row">
+                                            <td class="first-col"></td>
+                                            <td class="sec-col">
+                                                {{post.summery}}
+                                            </td>
+                                            <td class="third-col"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 hidden-xs right-section"></div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-background-img"></div>
+</div>

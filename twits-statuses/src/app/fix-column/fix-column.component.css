@@ -1,8 +1,8 @@
 .fix-column {
-    background: white;
-    height: 1500px;
+    background-color: white;
     text-align: center;
     padding: 25px;
+    padding-top: 150px;
 }
 
 .sign-in-box {
@@ -14,7 +14,7 @@
 }
 
 .fix-column-header-line {
-    background: url("../../assets/fix-column-header-line.png") no-repeat center;
+    background: url("./assets/images/fix-column-header-line.png") no-repeat center;
     height: 30px;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .fix-column-tool-bar{
-    background: url("../../assets/fix-column-tool-bar.png") no-repeat center;
+    background: url("./assets/images/fix-column-tool-bar.png") no-repeat center;
     height: 70px;
 }
 
@@ -57,8 +57,13 @@
 }
 
 .header-status .like {
-    background: url("../../assets/like.png") no-repeat right;
+    background: url("./assets/images/like.png") no-repeat right;
     width: 30px;
     height: 20px;
+}
+
+.input-group {
+    margin-top: -50px;
+    padding-bottom: 10px;
 }
 

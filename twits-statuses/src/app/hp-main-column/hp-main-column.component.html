@@ -1,7 +1,9 @@
-
-
-<app-single-status></app-single-status>
-<div class="row" *ngFor="let post of posts; let i=index">
+<div class="main">
+    <div class="hidden-sm hidden-md hidden-lg">
+        <app-login></app-login>
+    </div>
+    <app-single-status></app-single-status>
+<div class="row post-row" *ngFor="let post of posts; let i=index">
     <!-- first-post -->
 
     <div *ngIf="i == 0">
@@ -21,13 +23,13 @@
                 </div>
             </div>
         </div>
-        <div class="box left-border" [style.background-image]="'url(' + post.imgUrl + ')'">
+        <div class="box left-border" [style.background-image]="'url(' + post.mainImgUrl + ')'" (click)="storePostDetails(post._id, post.category)" routerLink="/posts">
             <table id="table-post1">
                 <tr class="first-row"><tr>
                 <tr class="sec-row">
                     <td class="first-col"></td>
                     <td class="sec-col">
-                        {{post.header}}
+                        {{post.summery}}
                     </td>
                     <td class="third-col"></td>
                 </tr>
@@ -52,13 +54,13 @@
                 </div>
             </div>
         </div>
-        <div class="box right-border" [style.background-image]="'url(' + post.imgUrl + ')'">
+        <div class="box right-border" [style.background-image]="'url(' + post.mainImgUrl + ')'" (click)="storePostDetails(post._id, post.category)" routerLink="/posts">
             <table id="table-post2">
                 <tr class="first-row"><tr>
                 <tr class="sec-row">
                     <td class="first-col"></td>
                     <td class="sec-col">
-                        {{post.header}}
+                        {{post.summery}}
                     </td>
                     <td class="third-col"></td>
                 </tr>
@@ -83,13 +85,13 @@
                 </div>
             </div>
         </div>
-        <div class="box" [style.background-image]="'url(' + post.imgUrl + ')'">
+        <div class="box" [style.background-image]="'url(' + post.mainImgUrl + ')'" (click)="storePostDetails(post._id, post.category)" routerLink="/posts">
             <table id="table-post3">
                 <tr class="first-row"><tr>
                 <tr class="sec-row">
                     <td class="first-col"></td>
                     <td class="sec-col">
-                        {{post.header}}
+                        {{post.summery}}
                     </td>
                     <td class="third-col"></td>
                 </tr>
@@ -115,13 +117,13 @@
                 </div>
             </div>
         </div>
-        <div class="box" [style.background-image]="'url(' + post.imgUrl + ')'">
+        <div class="box" [style.background-image]="'url(' + post.mainImgUrl + ')'" (click)="storePostDetails(post._id, post.category)" routerLink="/posts">
             <table id="table-post4">
                 <tr class="first-row"><tr>
                 <tr class="sec-row">
                     <td class="first-col"></td>
                     <td class="sec-col">
-                        {{post.header}}
+                        {{post.summery}}
                     </td>
                     <td class="third-col"></td>
                 </tr>
@@ -129,3 +131,5 @@
         </div>
     </div>
 </div>
+</div>
+

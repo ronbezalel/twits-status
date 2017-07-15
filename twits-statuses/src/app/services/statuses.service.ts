@@ -7,7 +7,7 @@ import { Http, Response, RequestOptions, Headers } from '@angular/http';
 export class StatusesService {
     private statuses: HeaderStatus[] = [];
 
-    storedStatusId: string;
+    storedStatusId: string = "";
 
 
     constructor(private http : Http) { 
@@ -22,19 +22,31 @@ export class StatusesService {
         return this.http.get('http://tweets-statuses.herokuapp.com/GetTopStatusObj');
     }
 
+    getStatusById(id: string){
+        return this.http.get('http://tweets-statuses.herokuapp.com/GetstatusById?statusId=' + id);
+    }
+
+    getStatusesByUser(userName: string){
+        return this.http.get('http://tweets-statuses.herokuapp.com/getUserStatuses?userName=' + userName);
+    }
+
     incTwits(statusId: string){
         let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });
         let options = new RequestOptions({ headers: headers });
 
-        var body = `statusId=${statusId }`;
-
-        console.log('inc twits');
+        var body = `statusId=${statusId}`;
         let httpPost = this.http.post('http://tweets-statuses.herokuapp.com/IncTweetForStatus', body, options);
 
         return httpPost;
     }
 
-    getStatusById(id: string){
-        return this.http.get('http://tweets-statuses.herokuapp.com/GetstatusById?statusId=' + id);
+    sendStatus(newStatus: string, userName: string){
+        let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });
+        let options = new RequestOptions({ headers: headers });
+
+        var body = `statusContent=${newStatus}&userName=${userName}`;
+        let httpPost = this.http.post('http://tweets-statuses.herokuapp.com/addUserStatus', body, options);
+
+        return httpPost;
     }
 }

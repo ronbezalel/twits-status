@@ -6,6 +6,8 @@ import { Http, Response, RequestOptions, Headers } from '@angular/http';
 export class UsersService {
 
     isLoggedIn : boolean = false;
+    userName : string = "";
+    userImg : string = "";
 
     displayError: boolean = false;
     error: string = "";
@@ -29,7 +31,9 @@ export class UsersService {
                 this.error = res.error;
             }
             else{
+                this.userImg = res;
               this.isLoggedIn = true;
+              this.userName = body.name;
             }
           },
           error => {
@@ -44,6 +48,7 @@ export class UsersService {
 
         httpPromise.subscribe((success) => {
             this.isLoggedIn = false;
+            this.userName = "";
         });
 
         return httpPromise;

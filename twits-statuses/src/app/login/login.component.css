@@ -1,5 +1,5 @@
 a {
-    cursor: pointer;;
+    cursor: pointer;
 }
 
 a:hover {
@@ -10,4 +10,18 @@ a:hover {
     padding: 10px;
     color: #b71c1c;
     font-weight: 600;
+}
+
+@media (max-width : 510px) {
+    .login {
+        padding-left: 25px;
+    }
+
+    a {
+        padding-left: 30px;
+    }
+
+    input {
+        width: 250px;
+    }
 }

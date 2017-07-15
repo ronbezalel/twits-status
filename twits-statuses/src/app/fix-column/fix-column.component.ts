@@ -23,7 +23,6 @@ export class FixColumnComponent implements OnInit {
         .subscribe((response: Response) => {
                 var rawStatuses = response.json();
                 for(var i in rawStatuses){
-                    //soulde be owner
                     var rawStatus = rawStatuses[i];
                     var status = new HeaderStatus(rawStatus.userName, rawStatus.tweets, rawStatus.likes);
                     this.topStatuses.push(status);

@@ -1,0 +1,419 @@
+.wrapper {
+    width: 100%;
+}
+
+.wrapper > .row {
+    margin-right: 0px;
+}
+
+.wrapper .col-sm-5 .col-sm-7 {
+    background: url("./assets/images/hp-bg.png");
+
+    min-height: 1463px;
+}
+
+.wrapper .col-sm-5 .col-sm-5 {
+        padding-top: 45px;
+}
+
+.main-col .col-sm-8 {
+    background: url("./assets/images/hp-bg.png");
+    min-height: 1393px;
+}
+
+.fix {
+    background: url("./assets/images/hp-top2.png") no-repeat;
+    width: 100%;
+    height: 173px;
+    position: absolute;
+    z-index: 999;
+}
+
+.top-background-img{
+    background: url("./assets/images/hp-top2.png") no-repeat;
+    padding-top: 45px;
+    margin: 0;
+}
+
+.bottom-background-img {
+    background: url("./assets/images/hp-bottom.png") no-repeat;
+    background-color: white;
+    height: 200px;
+}
+
+.right-section {
+    background: white;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.main-col {
+    margin-top: 0px;
+    padding-top: 70px;
+}
+
+.main-col .col-sm-8.col-xs-12 {
+    padding: 0;
+    padding-top: 30px;
+}
+
+.error {
+    color: #b71c1c;
+    font-size: 18px;
+    font-weight: 700;
+    padding-left: 50px;
+}
+
+
+/*new css*/
+
+.topper {
+     background: url("./assets/images/hp-status-topper.png") no-repeat center center;
+     background-size: cover;
+     width:100%;
+     height: 150px;
+     border-bottom: 5px solid #FFF100;
+}
+
+.posts-header {
+        height: 195px;
+}
+
+.posts-header .header {
+    width: 30%;
+    height: 35px;
+    float: right;
+    direction: rtl;
+    background-color: #FFF100;
+    font-size: 24px;
+    font-weight: 700;
+    padding-right: 20px;
+}
+
+.categories{
+    background-color: #FFF100;
+     width:70%;
+     height: 45px;
+     float: right;
+     padding-top: 10px;
+    padding-right: 10px;
+}
+
+.categories ul {
+    list-style-type: none;  
+}
+
+.categories li {
+    float: right;
+    margin-left: 10px;
+    direction: rtl;
+    font-weight: 500;
+
+}
+
+.categories li a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.categories span {
+    padding-right: 10px;
+}
+
+.current{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/*display post*/
+
+.display-post {
+    margin-top: 20px;
+}
+
+.display-post img {
+    width: 100%;
+    margin-top: -5px;
+    border-left: 10px solid #FFF100;
+}
+
+.display-post-content {
+    background-color: white;
+    border-left: 10px solid #FFF100;
+    border-right: 10px solid #FFF100;
+    direction: rtl;
+    padding: 50px;
+}
+
+.display-post-comments .row {
+    margin-left: 0px;
+    margin-right: 0px;
+    
+}
+
+.display-post-comments .col-xs-10 {
+    background-color: white;
+    border-left: 10px solid #FFF100;
+    border-right: 10px solid #FFF100;
+    border-bottom: 10px solid #FFF100;
+}
+
+.display-post-comments .col-xs-2 {
+    border-top: 10px solid #FFF100;
+}
+
+.comment {
+    height: 100px;
+    direction: rtl;
+    padding: 10px;
+}
+
+.name-date .name {
+    color: #3A589E;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.name-date .date {
+    color: gray;
+    padding-right: 10px;
+}
+/*display post and posts*/
+
+.separation {
+    width: 100%;
+    height: 48px;
+    background-color: transparent;
+}
+
+.half-yellow {
+    background-color: transparent;
+    padding: 0;
+}
+
+.header [class^='col-xs'].date {
+    height: 40px;
+    background-color: #FFF100;
+    padding-right: 20px;
+}
+
+.date h2 {
+    font-weight: 900;
+    font-size: 20px;
+    /*margin: 16px 0px 0px 17px ;*/
+    margin-top: 16px;
+    float: right;
+}
+
+.half-trans {
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    margin:0;
+}
+
+.full-yellow {
+    background-color: #FFF100;
+    height: 30px;
+    padding-right: 20px;
+}
+
+.full-yellow h6 {
+    float: right;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.header {
+    height: 70px;
+    margin: 0;
+}
+
+.header [class^='col-xs'] {
+    padding: 0;
+}
+
+/*posts*/
+
+.box {
+    width: 100%;
+    height: 210px;
+    cursor: pointer;
+}
+
+.left-border {
+     border-left: 10px solid #FFF100;
+}
+
+.right-border {
+     border-right: 10px solid #FFF100;
+}
+
+.full-yellow.special {
+    width: 80%;
+    float: right;
+}
+
+.separation.special {
+    width: 80%;
+    float: right;
+}
+
+.col-xs-2.special {
+    width: 20%;
+}
+
+table {
+    width: 100%;
+    height: 205px;
+    background-color: transparent;
+}
+
+.sec-col {
+    font-size: 12px;
+    font-weight: 800;
+    padding: 0px 10px 20px 10px;
+    direction: rtl;
+    width: 347px;
+    background: url('./assets/images/hp-idea-box.png') 100% no-repeat;
+}
+
+/*table1*/
+
+#table-post1 .first-row {
+    height: 68px
+}
+
+#table-post1 .sec-row {
+    height: 165px
+}
+
+
+#table-post1 .first-col {
+    width: 80px;
+}
+
+#table-post1 .third-col {
+    width: 264px;
+}
+
+/*table2*/
+
+#table-post2 .first-row {
+    height: 67px
+}
+
+#table-post2 .sec-row {
+    height: 167px
+}
+
+
+#table-post2 .first-col {
+    width: 0px;
+}
+
+#table-post2 .third-col {
+    width: 30%;
+}
+
+/*table3*/
+
+#table-post3 .first-row {
+    height: 47px
+}
+
+#table-post3 .sec-row {
+    height: 167px
+}
+
+
+#table-post3 .first-col {
+    width: 342px;
+}
+
+#table-post3 .third-col {
+    width: 15px;
+}
+
+/*table4*/
+
+#table-post4 .first-row {
+    height: 68px
+}
+
+#table-post4 .sec-row {
+    height: 167px
+}
+
+
+#table-post4 .first-col {
+    width: 123px;
+}
+
+#table-post4 .third-col {
+    width: 232px;
+}
+
+.row-margin {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.posts-category {
+    padding-top: 75px;
+}
+
+@media (max-width : 510px) {
+    .date h2 {
+        font-size: 14px;
+    }
+
+    .row {
+        margin:0;
+    }
+
+    .fix {
+        height: 70px;
+    }
+
+    .main-col {
+        padding-top: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    #table-post1 .first-col {
+        width: 15px;
+    }
+
+    #table-post1 .third-col {
+        width: 15px;
+    }
+
+    #table-post2 .first-col {
+        width: 15px;
+    }
+
+    #table-post2 .third-col {
+        width: 15px;
+    }
+
+    #table-post3 .first-col {
+        width: 15px;
+    }
+
+    #table-post3 .third-col {
+        width: 15px;
+    }
+
+    #table-post4 .first-col {
+        width: 15px;
+    }
+
+    #table-post4 .third-col {
+        width: 15px;
+    }
+}
